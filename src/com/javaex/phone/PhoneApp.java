@@ -107,6 +107,11 @@ public class PhoneApp {
 				case 6:
 					System.out.println("<6.종료>");
 					
+					System.out.println("******************************************");
+					System.out.println("*                감사합니다                *");
+					System.out.println("******************************************");
+					System.out.println("");
+					
 					run = false;
 					
 					break;
@@ -118,17 +123,10 @@ public class PhoneApp {
 	
 				}
 
+			}
+
+			sc.close();
 		}
 
-		System.out.println("******************************************");
-		System.out.println("*                감사합니다                *");
-		System.out.println("******************************************");
-		System.out.println("");
-
-		
-		sc.close();
 	}
-
-	}
-
 
