@@ -35,7 +35,7 @@ public class PhoneApp {
 					for(int i = 0; i<phoneList.size(); i++) {
 						
 						PersonVo personVo = phoneList.get(i);
-						System.out.println(personVo.getPersonId() + ".\t" + personVo.getName() + "\t"
+						System.out.println(personVo.getPersonId() + ". " + personVo.getName() + "\t"
 										   + personVo.getHp() + "\t" + personVo.getCompany() );
 						
 					}
@@ -120,7 +120,7 @@ public class PhoneApp {
 					System.out.println("[다시 입력해 주세요.]");
 					
 					break;
-	
+					
 			}
 
 		}
