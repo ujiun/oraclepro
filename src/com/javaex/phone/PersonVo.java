@@ -27,7 +27,7 @@ public class PersonVo {
 
 
 	
-	//메서드-gs
+	//메소드-gs
 	public int getPersonId() {
 		return personId;
 	}
@@ -61,7 +61,7 @@ public class PersonVo {
 	}
 	
 	
-	//메서드일반
+	//메소드일반
 	@Override
 	public String toString() {
 		return "PersonVo [personId=" + personId + ", name=" + name + ", hp=" + hp + ", company=" + company + "]";
