@@ -100,7 +100,7 @@ public class PhoneApp {
 				case 5:
 					System.out.println("<5.검색>");				
 					
-					
+					 
 					break;
 					
 				//종료
