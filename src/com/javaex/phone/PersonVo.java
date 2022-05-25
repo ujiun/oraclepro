@@ -61,7 +61,7 @@ public class PersonVo {
 	}
 	
 	
-	//메소드일반
+	//메소드 일반
 	@Override
 	public String toString() {
 		return "PersonVo [personId=" + personId + ", name=" + name + ", hp=" + hp + ", company=" + company + "]";
