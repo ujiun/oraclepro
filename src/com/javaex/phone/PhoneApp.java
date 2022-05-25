@@ -25,6 +25,7 @@ public class PhoneApp {
 			System.out.print(">메뉴번호: ");
 			
 			int num = sc.nextInt();
+			sc.nextLine();
 			
 			switch (num) {
 				//리스트
