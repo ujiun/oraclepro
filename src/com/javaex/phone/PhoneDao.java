@@ -219,12 +219,12 @@ public class PhoneDao {
 
 		} catch (SQLException e) {
 			System.out.println("error:" + e);
-			}
+		}
 
-			close();
+		close();
 
-			return phoneList;
+		return phoneList;
  
-		}	    
+	}	    
 		
 }
