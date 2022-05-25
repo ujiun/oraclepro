@@ -121,12 +121,12 @@ public class PhoneApp {
 					
 					break;
 	
-				}
-
 			}
 
-			sc.close();
 		}
 
+		sc.close();
 	}
+
+}
 
