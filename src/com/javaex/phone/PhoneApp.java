@@ -10,9 +10,9 @@ public class PhoneApp {
 		Scanner sc = new Scanner(System.in);
 		PhoneDao phoneDao = new PhoneDao();
 
-		System.out.println("*******************************************");
-		System.out.println("*            전화번호 관리 프로그램            *");
-		System.out.println("*******************************************");
+		System.out.println("******************************************");
+		System.out.println("*            전화번호 관리 프로그램           *");
+		System.out.println("******************************************");
 		System.out.println("");
 
 		
@@ -21,7 +21,7 @@ public class PhoneApp {
 			System.out.println("");
 			System.out.print("1.리스트    2.등록    3.수정    4.삭제    5.검색    6.종료");
 			System.out.println("");
-			System.out.println("-----------------------------------------------------");
+			System.out.println("------------------------------------------------");
 			System.out.print(">메뉴번호: ");
 			
 			int num = sc.nextInt();
@@ -39,7 +39,6 @@ public class PhoneApp {
 										   + personVo.getHp() + "  " + personVo.getCompany() );
 						
 					}
-					
 					break;
 				
 				//등록
@@ -58,7 +57,6 @@ public class PhoneApp {
 					PersonVo p = new PersonVo(name, hp, company);
 					
 					phoneDao.phoneInsert(p);
-					
 					break;
 				
 				//수정
@@ -67,7 +65,6 @@ public class PhoneApp {
 					
 					System.out.print("번호> ");
 					int personId = sc.nextInt();
-					
 					
 					System.out.print("이름 > ");
 					String rename = sc.next();
@@ -81,8 +78,6 @@ public class PhoneApp {
 					PersonVo rep = new PersonVo(personId, rename, rehp, recompany);
 					
 					phoneDao.phoneUpdate(rep);
-					
-					
 					break;
 				
 				//삭제
@@ -93,27 +88,37 @@ public class PhoneApp {
 					int pdelete = sc.nextInt();
 					
 					phoneDao.phoneDelete(pdelete);
-					
 					break;
 					
 				//검색
 				case 5:
 					System.out.println("<5.검색>");				
 					
+					System.out.print("검색어 >");
+					String serch = sc.nextLine();
 					 
+					phoneDao.phoneSerch(serch);
+					List<PersonVo> sList = phoneDao.phoneSerch(serch);
+					
+					for(int i = 0; i<sList.size(); i++) {
+						PersonVo personVo = sList.get(i);
+						System.out.println(personVo.getPersonId() + ". " + personVo.getName() + "  "
+										   + personVo.getHp() + "  " + personVo.getCompany() );
+						
+					}
+					
 					break;
 					
 				//종료
 				case 6:
 					System.out.println("<6.종료>");
 					
-					System.out.println("******************************************");
-					System.out.println("*                감사합니다                *");
-					System.out.println("******************************************");
+					System.out.println("***************************************");
+					System.out.println("*              감사합니다                *");
+					System.out.println("***************************************");
 					System.out.println("");
 					
 					run = false;
-					
 					break;
 	
 				default:
